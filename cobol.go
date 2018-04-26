@@ -1,7 +1,8 @@
 /*
 Package cobol provides functions for converting text and signed/unsigned integers + decimals to Cobol friendly formats
-*/
 
+
+*/
 package cobol
 
 import (
