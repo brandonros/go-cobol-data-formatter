@@ -1,3 +1,7 @@
+/*
+Package cobol provides functions for converting text and signed/unsigned integers + decimals to Cobol friendly formats
+*/
+
 package cobol
 
 import (
@@ -65,6 +69,8 @@ func formatTextData(input string, format string, length int) (string) {
   return pad(input, " ", length, "right")
 }
 
+// FormatData takes input, a format like X(50), 9(9), 9(15)V99, and the length of the field from the copybook
+// and outputs a formatted value, with memoization
 func FormatData(input string, format string, length int) (string) {
   cacheKey := "formatData:" + input + ":" + format + ":" + strconv.Itoa(length)
 
